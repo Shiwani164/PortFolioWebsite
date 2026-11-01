@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shiwani Nepali's personal portfolio website.">
+  <title>Information | Shiwani Nepali</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">Shiwani<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="information.html">Information</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner container">
+      <span class="eyebrow">A few details about me</span>
+      <h1>Personal <span class="gradient-text">Information</span></h1>
+      <p>Here is a simple table containing the basic details for my student portfolio.</p>
+    </section>
+
+    <section class="info-wrap container">
+      <div class="info-card">
+        <table>
+          <tbody>
+            <tr><th scope="row">Full Name</th><td>Shiwani Nepali</td></tr>
+            <tr><th scope="row">Age</th><td>16 years</td></tr>
+            <tr><th scope="row">Date of Birth</th><td>2067-07-16 (B.S.)</td></tr>
+            <tr><th scope="row">School</th><td>Annapurna Secondary School</td></tr>
+            <tr><th scope="row">Class</th><td>9</td></tr>
+            <tr><th scope="row">Address</th><td>Parbatipur, Chitwan</td></tr>
+            <tr><th scope="row">Contact Number</th><td>--</td></tr>
+            <tr><th scope="row">Email</th><td>shiwaninepali21@gmail.com</td></tr>
+            <tr><th scope="row">Interests</th><td>Learning, creativity, school activities and making memories</td></tr>
+            <tr><th scope="row">My Goal</th><td>To keep learning, improve my skills and work towards my dreams.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note">Privacy tip: before publishing this website publicly, consider removing your exact date of birth and keeping your address general.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div>
+        <a class="brand" href="index.html">Shiwani<span>.</span></a>
+        <p style="margin-top:12px">A little space to share my interests, school journey, memories and creativity.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="information.html">Information</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <a href="mailto:shiwaninepali21@gmail.com">shiwaninepali21@gmail.com</a></li>
+          <li>Phone: --</li>
+          <li>Location: Parbatipur, Chitwan</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © <span class="current-year">2026</span> Shiwani Nepali. Created for a student portfolio project.
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.textContent = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('.current-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

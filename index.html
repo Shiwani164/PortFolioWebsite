@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shiwani Nepali's personal portfolio website.">
+  <title>Home | Shiwani Nepali</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">Shiwani<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="information.html">Information</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero container">
+      <div class="reveal">
+        <span class="eyebrow">Welcome to my portfolio</span>
+        <h1>Hello, I'm<br><span class="gradient-text">Shiwani Nepali</span></h1>
+        <p class="lead">Welcome to my little corner of the internet! I am a Class 9 student who enjoys learning new things, exploring creativity and collecting beautiful memories along the way.</p>
+
+        <div class="button-row">
+          <a class="btn btn-primary" href="gallery.html">Explore My Gallery <span>↗</span></a>
+          <a class="btn btn-outline" href="information.html">Know About Me</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Cover photo placeholder">
+        <div class="photo-placeholder">
+          <div>
+            <strong>Your cover photo goes here</strong>
+            <span>welcome.jpg</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">A little introduction</span>
+        <h2>Every day is a chance to <span class="gradient-text">grow.</span></h2>
+        <p>This website is a small collection of my school life, interests, favourite moments and goals. Feel free to explore the pages.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">✦</div>
+          <h3>Learning</h3>
+          <p>I believe that learning something new every day helps us become more confident and capable.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">♡</div>
+          <h3>Creativity</h3>
+          <p>I enjoy expressing ideas, trying creative activities and looking at the world in different ways.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">✧</div>
+          <h3>Memories</h3>
+          <p>Small moments can become special memories. My gallery is a place to keep some of them.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">What's coming up</span>
+        <h2>Upcoming <span class="gradient-text">events</span></h2>
+        <p>A few example event cards. Edit the titles and dates to match your real school calendar.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <p class="event-date">SCHOOL EVENT</p>
+          <h3>Annual Function</h3>
+          <p>A day to celebrate talent, teamwork and achievements at school.</p>
+        </article>
+
+        <article class="card">
+          <p class="event-date">LEARNING</p>
+          <h3>Class Project</h3>
+          <p>Working on a project, sharing ideas and learning through practice.</p>
+        </article>
+
+        <article class="card">
+          <p class="event-date">COMING SOON</p>
+          <h3>Sports & Activities</h3>
+          <p>Taking part, cheering for friends and enjoying school activities.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+
+      <div>
+        <a class="brand" href="index.html">Shiwani<span>.</span></a>
+        <p style="margin-top:12px">A little space to share my interests, school journey, memories and creativity.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="information.html">Information</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <a href="mailto:shiwaninepali21@gmail.com">shiwaninepali21@gmail.com</a></li>
+          <li>Phone: --</li>
+          <li>Location: Parbatipur, Chitwan</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span class="current-year">2026</span> Shiwani Nepali. Created for a student portfolio project.
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.textContent = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('.current-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+</html>

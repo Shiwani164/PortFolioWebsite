@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shiwani Nepali's personal portfolio website.">
+  <title>Contact | Shiwani Nepali</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html">Shiwani<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="information.html">Information</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner container">
+      <span class="eyebrow">Let's connect</span>
+      <h1>Get in <span class="gradient-text">Touch</span></h1>
+      <p>Use the form below to send a message. This is a front-end demonstration form for the HTML and CSS project.</p>
+    </section>
+
+    <section class="contact-layout container">
+      <aside class="contact-panel">
+        <h2>Contact details</h2>
+        <p>You can update these details if you want to share a public contact method. For privacy, avoid publishing your home address or personal phone number.</p>
+
+        <div class="contact-detail">
+          <div>
+            <small>Email</small>
+            <a href="mailto:shiwaninepali21@gmail.com">shiwaninepali21@gmail.com</a>
+          </div>
+          <div><small>Phone</small>--</div>
+          <div><small>Location</small>Parbatipur, Chitwan</div>
+          <div><small>School</small>Annapurna Secondary School</div>
+        </div>
+      </aside>
+
+      <section class="form-panel">
+        <h2>Send a message</h2>
+        <form id="contactForm">
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" type="text" placeholder="Your first name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="lastName" type="text" placeholder="Your last name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Optional">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group full">
+              <label for="address">Address (optional)</label>
+              <input id="address" name="address" type="text" placeholder="City or general area only">
+            </div>
+
+            <div class="form-group full">
+              <span class="legend">How would you like to be contacted?</span>
+              <div class="radio-row">
+                <label><input type="radio" name="contactMethod" value="Email" checked> Email</label>
+                <label><input type="radio" name="contactMethod" value="Phone"> Phone</label>
+                <label><input type="radio" name="contactMethod" value="No preference"> No preference</label>
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label for="topic">Message topic</label>
+              <select id="topic" name="topic" required>
+                <option value="">Choose a topic</option>
+                <option>General message</option>
+                <option>School project</option>
+                <option>Feedback</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <div class="form-group full">
+              <button class="btn btn-primary" type="submit">Submit Message ↗</button>
+              <p class="form-status" id="formStatus" role="status"></p>
+            </div>
+
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('formStatus').textContent =
+          'Thank you! The form layout works, but messages are not sent because this is a static HTML website.';
+        this.reset();
+      });
+    </script>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div>
+        <a class="brand" href="index.html">Shiwani<span>.</span></a>
+        <p style="margin-top:12px">A little space to share my interests, school journey, memories and creativity.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="information.html">Information</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: <a href="mailto:shiwaninepali21@gmail.com">shiwaninepali21@gmail.com</a></li>
+          <li>Phone: --</li>
+          <li>Location: Parbatipur, Chitwan</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © <span class="current-year">2026</span> Shiwani Nepali. Created for a student portfolio project.
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.textContent = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('.current-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
+```
